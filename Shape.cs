@@ -15,7 +15,7 @@ namespace assignment4
     }
 
     // Rectangle implements Shape
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
         // two sides defined using properties
         public double Length { get; set; }
@@ -39,7 +39,7 @@ namespace assignment4
     }
 
     // Circle implements Shape
-    class Circle : Shape
+    partial class Circle : Shape
     {
         // Radius implemented as property
         public double Radius { get; set; }
