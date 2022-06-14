@@ -15,8 +15,10 @@ namespace assignment4
     }
 
     // Rectangle implements Shape
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
+        public string Name => this.GetType().Name;
+
         // two sides defined using properties
         public double Length { get; set; }
         public double Width { get; set; }
@@ -31,7 +33,7 @@ namespace assignment4
             Width = width;
         }
 
-        public override string ToString() => this.GetType().Name + ", " + Length + ", " + Width;
+        public override string ToString() => Name + ", " + Length + ", " + Width;
 
         public double GetPerimeter() => (2 * Length) + (2 * Width);
 
@@ -39,8 +41,10 @@ namespace assignment4
     }
 
     // Circle implements Shape
-    class Circle : Shape
+    partial class Circle : Shape
     {
+        public string Name => this.GetType().Name;
+
         // Radius implemented as property
         public double Radius { get; set; }
 
@@ -53,7 +57,7 @@ namespace assignment4
             Radius = radius;
         }
 
-        public override string ToString() => this.GetType().Name + ", " + Radius;
+        public override string ToString() => Name + ", " + Radius;
 
         public double GetPerimeter() => 2 * Math.PI * Radius;
 
